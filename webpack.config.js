@@ -2,6 +2,7 @@ const config = {
     mode: "production",
     entry: {
         index: "./src/js/screens/index.js",
+        settings: "./src/js/screens/settings.js",
     },
 
     output: {

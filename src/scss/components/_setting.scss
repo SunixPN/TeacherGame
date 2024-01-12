@@ -1,0 +1,177 @@
+.setting {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.setting__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.setting__title {
+    color: $text;
+    @include adaptive-font(30, 45);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.setting__block {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+
+/////////////////////////////////////////////////
+
+.tasks {
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.181);
+    border-radius: 20px;
+    flex: 0 1 800px;
+    min-height: 500px;
+}
+
+.tasks__title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.tasks__title {
+    color: $text;
+    font-weight: 500;
+    @include adaptive-font(20, 30);
+}
+
+.tasks__paragraph {
+    max-width: 500px;
+    font-weight: 400;
+    color: $text;
+    line-height: 22px;
+    @include adaptive-font(13, 16);
+}
+
+.tasks__form {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.321);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tasks__input {
+    outline: none;
+    padding: 10px 15px 10px 15px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+    flex: 1 1;
+    @include adaptive-font(15, 17);
+    color: $text;
+    font-weight: 600;
+}
+
+.tasks__button {
+    flex: 0 1 220px;
+    padding: 15px 0;
+    border-radius: 8px;
+    background-color: $orange;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    @include adaptive-font(15, 17);
+    cursor: pointer;
+    transition: 0.3s;
+    border: 3px solid $orange;
+
+    &:hover {
+        background-color: inherit;
+        color: $orange;
+    }
+}
+
+.tasks__box {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+.task {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.321);
+    transition: 0.3s;
+}
+
+.task__title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.task__title {
+    color: $text;
+    @include adaptive-font(15, 17);
+    font-weight: 600;
+}
+
+.task__value {
+    font-weight: 500;
+    color: $text;
+    @include adaptive-font(13, 15);
+}
+
+.task__button {
+    flex: 0 1 220px;
+    padding: 15px 0;
+    border-radius: 8px;
+    background-color: $orange;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    @include adaptive-font(15, 17);
+    cursor: pointer;
+    transition: 0.3s;
+    border: 3px solid $orange;
+
+    &:hover {
+        background-color: inherit;
+        color: $orange;
+    }
+}
+
+.task__empty {
+    @include adaptive-font(19, 25);
+    text-align: center;
+    max-width: 400px;
+    align-self: center;
+    color: $text;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.hidden {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.task--out {
+    transform: translateX(-500px);
+    opacity: 0;
+}

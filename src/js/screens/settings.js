@@ -1,5 +1,9 @@
+import { task } from "../components/task/task"
+
+
 document.addEventListener("DOMContentLoaded", () => {
     if (!sessionStorage.getItem("kids")) {
+        console.log(sessionStorage.getItem("kids"))
         const kids = [
             "Акулич Александра",
             "Алексеева Александра",
@@ -39,4 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!sessionStorage.getItem("tasks")) {
         sessionStorage.setItem("tasks", JSON.stringify([]))
     }
+
+    task()
 })
+
+
