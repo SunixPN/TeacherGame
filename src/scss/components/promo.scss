@@ -1,0 +1,259 @@
+.promo {
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.promo__circle {
+    width: 200px;
+    height: 200px;
+    background-color: $orange;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    transform: translate(50px, -50px);
+    z-index: -1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        background-color: white;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.promo__circle:nth-child(2) {
+    left: 0;
+    top: 0;
+    transform: translate(100px, -100px);
+}
+
+.promo__content {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.promo__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 1 900px;
+}
+
+.promo__title {
+    @include adaptive-font(30, 46);
+    color: $text;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 62px;
+    margin-top: 5px;
+}
+
+.promo__buttons {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.promo__button {
+    padding: 10px 0;
+    flex: 0 1 335px;
+    color: white;
+    border-radius: 8px;
+    @include adaptive-font(17, 25);
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.promo__button--competition {
+    background-color: $orange;
+}
+.promo__button--team {
+    background-color: inherit;
+    border: 3px solid $orange;
+    color: $orange;
+}
+
+.promo__title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.promo__sub {
+    font-weight: 400;
+    @include adaptive-font(12, 15);
+    color: white;
+    display: inline-block;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: $orange;
+    border-radius: 100px;
+}
+
+.promo__paragraph {
+    margin-top: 15px;
+    color: $text;
+    font-weight: 400;
+    @include adaptive-font(15, 18);
+    max-width: 900px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    max-width: 750px;
+}
+
+.promo__box {
+    flex: 0 1 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.166);
+    border-radius: 20px;
+    padding: 20px 30px;
+    background-color: white;
+}
+
+.promo__image {
+    width: 100%;
+    aspect-ratio: 2 / 1.4;
+    border-radius: 20px;
+}
+
+.promo__box-title {
+    margin-top: 20px;
+    @include adaptive-font(17, 23);
+    font-weight: 600;
+    color: $text;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.promo__box-paragraph {
+    margin-top: 15px;
+    color: $text;
+    font-weight: 400;
+    line-height: 25px;
+    @include adaptive-font(13, 17);
+    letter-spacing: 1px;
+}
+
+.promo__image-small {
+    width: 350px;
+    height: 373px;
+    position: absolute;
+    border-radius: 20px;
+    left: 0;
+    top: 0;
+    transform: translate(-70px, -70px);
+}
+
+.promo__button--inBox {
+    width: 100%;
+    margin-top: 20px;
+    flex: 0 1 auto;
+}
+
+@media screen and (max-width: 1216px) {
+    .promo__content {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .promo__text {
+        flex: 0 1 auto;
+    }
+
+    .promo__box {
+        flex: 0 1 auto;
+    }
+
+    .promo__title-box {
+        align-items: center;
+    }
+
+    .promo__title {
+        text-align: center;
+    }
+
+    .promo__paragraph {
+        text-align: center;
+    }
+
+    .promo__buttons {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .promo__circle:nth-child(2) {
+        transform: translate(-50px, -150px);
+    }
+
+    .promo__circle:first-child {
+        transform: translate(50px, -150px);
+    }
+
+    .promo__title {
+        line-height: 50px;
+    }
+
+    .promo__buttons {
+        flex-direction: column;
+    }
+
+    .promo__button {
+        flex: 0 1 auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .promo__title-box {
+        align-items: flex-start;
+    }
+
+    .promo__title {
+        text-align: left;
+        line-height: 40px;
+    }
+
+    .promo__paragraph {
+        text-align: left;
+        line-height: 25px;
+    }
+
+    .promo__box-paragraph {
+        line-height: 22px;
+    }
+
+    .promo__box-title {
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .promo__title {
+        font-size: 25px;
+        line-height: 32px;
+    }
+}
+

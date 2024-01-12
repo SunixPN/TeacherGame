@@ -1,0 +1,25 @@
+@import "./constants/variables";
+
+@import "./constants/mixin";
+
+@import "./constants/reset";
+
+@import "./constants/fonts";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: calc(1820 / 1920 * 100%);
+    margin: 0 auto;
+    max-width: 1820px;
+}
+
+
+
+@import "./components/*.scss";
