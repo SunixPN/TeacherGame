@@ -19,8 +19,8 @@
 
 .setting__block {
     display: flex;
-    align-items: flex-start;
     gap: 50px;
+    width: 100%;
 }
 
 
@@ -31,7 +31,7 @@
     background-color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.181);
     border-radius: 20px;
-    flex: 0 1 800px;
+    flex: 0 1 50%;
     min-height: 500px;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .tasks__button {
-    flex: 0 1 220px;
+    flex: 0 1 250px;
     padding: 15px 0;
     border-radius: 8px;
     background-color: $orange;
@@ -98,6 +98,87 @@
 }
 
 .tasks__box {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+.kids {
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.181);
+    border-radius: 20px;
+    flex: 0 1 50%;
+    min-height: 500px;
+}
+
+.kids__title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.kids__title {
+    color: $text;
+    font-weight: 500;
+    @include adaptive-font(20, 30);
+}
+
+.kids__paragraph {
+    max-width: 500px;
+    font-weight: 400;
+    color: $text;
+    line-height: 22px;
+    @include adaptive-font(13, 16);
+}
+
+.kids__form {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.321);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.kids__input {
+    outline: none;
+    padding: 10px 15px 10px 15px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+    flex: 1 1;
+    @include adaptive-font(15, 17);
+    color: $text;
+    font-weight: 600;
+}
+
+.kids__button {
+    flex: 0 1 250px;
+    padding: 15px 0;
+    border-radius: 8px;
+    background-color: $orange;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    @include adaptive-font(15, 17);
+    cursor: pointer;
+    transition: 0.3s;
+    border: 3px solid $orange;
+
+    &:hover {
+        background-color: inherit;
+        color: $orange;
+    }
+}
+
+.kids__box {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
@@ -174,4 +255,42 @@
 .task--out {
     transform: translateX(-500px);
     opacity: 0;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.kid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.321);
+    transition: 0.3s;
+}
+
+.kid__name {
+    color: $text;
+    @include adaptive-font(15, 17);
+    font-weight: 600;
+}
+
+.kid__del-button {
+    flex: 0 1 220px;
+    padding: 15px 0;
+    border-radius: 8px;
+    background-color: $orange;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    @include adaptive-font(15, 17);
+    cursor: pointer;
+    transition: 0.3s;
+    border: 3px solid $orange;
+
+    &:hover {
+        background-color: inherit;
+        color: $orange;
+    }
 }

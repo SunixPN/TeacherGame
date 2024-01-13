@@ -2,7 +2,7 @@ import { deleteTask } from "./deleteTask"
 
 export const renderTasks = () => {
     const tasksBox = document.querySelector(".tasks__box")
-    const tasks = JSON.parse(sessionStorage.getItem("tasks"))
+    const tasks = JSON.parse(localStorage.getItem("tasks"))
 
     if (tasks.length === 0) {
         tasksBox.innerHTML = `<p class="task__empty">Здесь пока пусто! Добавьте несколько задач</p>`
