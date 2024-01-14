@@ -268,6 +268,7 @@
     padding: 10px 15px;
     border: 1px solid rgba(0, 0, 0, 0.321);
     transition: 0.3s;
+    gap: 20px;
 }
 
 .kid__name {
@@ -292,5 +293,112 @@
     &:hover {
         background-color: inherit;
         color: $orange;
+    }
+}
+
+
+.settting__buttons {
+    display: flex;
+    gap: 10px;
+    align-self: flex-start;
+    width: 100%;
+}
+
+@media screen and (max-width: 1295px) {
+    .tasks__form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tasks__button {
+        width: 100%;
+        flex: 0 1 auto;
+    }
+
+    .tasks__input {
+        width: 100%;
+    }
+
+    .kids__form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .kids__button {
+        width: 100%;
+        flex: 0 1 auto;
+    }
+
+    .kids__input {
+        width: 100%;
+    }
+
+    .settting__buttons {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1147px) {
+    .setting__block {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .tasks {
+        flex: 0 1 auto;
+    }
+
+    .kids {
+        flex: 0 1 auto;
+    }
+}
+
+@media screen and (max-width: 712px) {
+    .settting__buttons {
+        flex-direction: column;
+    }
+
+    .promo__button--setting {
+        flex: 0 1 auto;
+    }
+
+    .setting__content {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .kid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .kid__del-button {
+        flex: 0 1 auto;
+        width: 100%;
+    }
+
+    .task {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tasks {
+        padding: 20px 10px;
+        min-height: 0;
+    }
+
+    .task__title-box {
+        align-items: center;
+    }
+
+    .task__button {
+        width: 100%;
+        flex: 0 1 auto;
+    }
+
+    .kids {
+        padding: 20px 10px;
+        min-height: 0;
     }
 }
