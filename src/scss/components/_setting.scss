@@ -196,6 +196,7 @@
     padding: 10px 15px;
     border: 1px solid rgba(0, 0, 0, 0.321);
     transition: 0.3s;
+    gap: 20px;
 }
 
 .task__title-box {
@@ -215,10 +216,11 @@
     font-weight: 500;
     color: $text;
     @include adaptive-font(13, 15);
+    max-width: 500px;
 }
 
 .task__button {
-    flex: 0 1 220px;
+    flex: 0 0 220px;
     padding: 15px 0;
     border-radius: 8px;
     background-color: $orange;
@@ -275,10 +277,11 @@
     color: $text;
     @include adaptive-font(15, 17);
     font-weight: 600;
+    max-width: 500px;
 }
 
 .kid__del-button {
-    flex: 0 1 220px;
+    flex: 0 0 220px;
     padding: 15px 0;
     border-radius: 8px;
     background-color: $orange;

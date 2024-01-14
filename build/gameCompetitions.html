@@ -35,44 +35,33 @@
     </div>
 </header>
     <main>
-        <section class="setting">
+        <section class="competitions">
+    <article class="modal modal--hidden">
+    <div class="modal__content">
+        <div class="modal__title-box">
+            <h3 class="modal__title">Игра завершена!</h3>
+            <p class="modal__paragraph">Снизу можно увидеть список победителей</p>
+        </div>
+        <div class="modal__winners">
+        </div>
+        <button class="modal__button">Вернуться в настройки</button>
+    </div>
+</article>
     <div class="wrapper">
-        <div class="setting__content">
-            <h1 class="setting__title">Настройки игры</h1>
-            <div class="settting__buttons">
-                <a href="./gameCompetitions.html" class="promo__button promo__button--competition promo__button--setting">Соревноваться</a>
-                <a href="./gameTeam.html" class="promo__button promo__button--team promo__button--setting">Командная игра</a>
+        <div class="competitions__content">
+            <h2 class="competitions__title">Соревнуемся против друг друга!</h2>
+            <div class="competitions__example-box">
+                <div class="competitions__example">
+                    <p class="competitions__value"></p> 
+                </div>
+                <button class="competitions__button-next">Следующее задание!</button>
             </div>
-            <div class="setting__block">
-                <section class="tasks">
-    <div class="tasks__title-box">
-        <h2 class="tasks__title">Задания для детей</h2>
-        <p class="tasks__paragraph">Добавте задания для детей, чтобы начать игру (это могут быть различные примеры или другие вопросы)</p>
-    </div>
-    <form class="tasks__form">
-        <input placeholder="Любая задача (к примеру 2 + 1 = ?)" class="tasks__input" type="text">
-        <button class="tasks__button">Добавить задание!</button>
-    </form>
-    <div class="tasks__box">
-    </div>
-</section>
-                <section class="kids">
-    <div class="kids__title-box">
-        <h2 class="kids__title">Участники гонки</h2>
-        <p class="kids__paragraph">
-            Добавьте в игру участников гонки (ВЫ можете отредактировать список детей, добавить или удалить ребёнка из списка)
-        </p>
-    </div>
-    <form class="kids__form">
-        <input placeholder="Фамилия и имя" class="kids__input" type="text">
-        <button class="kids__button">Добавить участника!</button>
-    </form>
-    <div class="kids__box">
-    </div>
-</section>
+            <div class="competitions__kids">
+
             </div>
         </div>
     </div>
+
 </section>
     </main>
     <footer class="footer">
@@ -107,6 +96,6 @@
         </div>
     </div>
 </footer>
-    <script src="./js/settings.bundle.js"></script>
+    <script src="./js/game.bundle.js"></script>
 </body>
 </html>
