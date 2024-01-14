@@ -22,7 +22,5 @@ export const modalScript = (modal, winners) => {
     modalButton.addEventListener("click", () => {
         modal.classList.add("modal--hidden")
         document.body.style.overflow = "vissible"
-        window.location.pathname = "./settings.html"
     })
-
 }
