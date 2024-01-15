@@ -1,1 +1,1 @@
-DEMO: https://suinxpn.github.io/TeacherGame
+DEMO: https://sunixpn.github.io/TeacherGame
