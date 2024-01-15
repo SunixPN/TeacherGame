@@ -55,9 +55,11 @@
         transition: transform 0.3s;
     }
 
-    &:hover {
-        &::before {
-            transform: scale(1);
+    @media (hover: hover) {        
+        &:hover {
+            &::before {
+                transform: scale(1);
+            }
         }
     }
 }
@@ -86,9 +88,10 @@
     width: 48px;
     height: 48px;
     transition: 0.3s;
-
-    &:hover {
-        transform: rotate(17deg);
+    @media (hover: hover) {        
+        &:hover {
+            transform: rotate(17deg);
+        }
     }
 }
 

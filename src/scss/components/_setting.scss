@@ -91,9 +91,11 @@
     transition: 0.3s;
     border: 3px solid $orange;
 
-    &:hover {
-        background-color: inherit;
-        color: $orange;
+    @media (hover: hover) {        
+        &:hover {
+            background-color: inherit;
+            color: $orange;
+        }
     }
 }
 
@@ -172,10 +174,13 @@
     transition: 0.3s;
     border: 3px solid $orange;
 
-    &:hover {
-        background-color: inherit;
-        color: $orange;
+    @media (hover: hover) {        
+        &:hover {
+            background-color: inherit;
+            color: $orange;
+        }
     }
+
 }
 
 .kids__box {
@@ -232,10 +237,13 @@
     transition: 0.3s;
     border: 3px solid $orange;
 
-    &:hover {
-        background-color: inherit;
-        color: $orange;
+    @media (hover: hover) {        
+        &:hover {
+            background-color: inherit;
+            color: $orange;
+        }
     }
+
 }
 
 .task__empty {
@@ -293,10 +301,13 @@
     transition: 0.3s;
     border: 3px solid $orange;
 
-    &:hover {
-        background-color: inherit;
-        color: $orange;
+    @media (hover: hover) {        
+        &:hover {
+            background-color: inherit;
+            color: $orange;
+        }
     }
+
 }
 
 

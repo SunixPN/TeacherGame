@@ -1,4 +1,4 @@
-const { renderCompetition } = require("../components/competititon/competition")
+import { renderCompetition } from "../components/competititon/competition"
 
 document.addEventListener("DOMContentLoaded", () => {
     renderCompetition()

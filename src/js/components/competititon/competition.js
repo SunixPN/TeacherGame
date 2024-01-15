@@ -1,3 +1,4 @@
+import { chooseAllHandleClick } from "./chooseAll";
 import { competititonButtonNextHandleClick } from "./competititonButtonNextHandleClick";
 import { kidGameButtonHandleClick } from "./kidGameButtonHandleClick";
 
@@ -32,12 +33,16 @@ export const renderCompetition = () => {
 
     const kidGameButtons = document.querySelectorAll(".kid-game__button")
 
+    const allButton = document.querySelector(".competitions__button-all")
+
+    allButton.addEventListener("click", chooseAllHandleClick(kidGameButtons))
+
     kidGameButtons.forEach(kidGameButton => {
         kidGameButton.addEventListener("click", kidGameButtonHandleClick)
     })
 
     const competititonButtonNext = document.querySelector(".competitions__button-next")
 
-    competititonButtonNext.addEventListener("click", () => competititonButtonNextHandleClick(kidGames, tasks))
+    competititonButtonNext.addEventListener("click", () => competititonButtonNextHandleClick(kidGames, tasks, allButton))
     
 }

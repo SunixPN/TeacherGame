@@ -29,9 +29,12 @@
     height: 48px;
     transition: 0.3s;
 
-    &:hover {
-        transform: rotate(17deg);
+    @media (hover: hover) {
+        &:hover {
+            transform: rotate(17deg);
+        }
     }
+
 }
 
 .nav {
@@ -58,8 +61,10 @@
     @include adaptive-font(13, 20);
     transition: 0.3s;
 
-    &:hover {
-        color: $orange;
+    @media (hover: hover) {
+        &:hover {
+            color: $orange;
+        }
     }
 }
 
