@@ -1,5 +1,5 @@
-export const chooseAllHandleClick = (buttons) => (event) => {
-    const tasksLength = JSON.parse(localStorage.getItem("tasks")).length
+export const chooseAllHandleClick = (buttons, tasks) => (event) => {
+    const tasksLength = tasks.length
 
     if (event.target.classList.contains("competitions__button-all--active")) {
         buttons.forEach(button => {

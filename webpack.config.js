@@ -3,7 +3,9 @@ const config = {
     entry: {
         index: "./src/js/screens/index.js",
         settings: "./src/js/screens/settings.js",
-        game: "./src/js/screens/game.js"
+        game: "./src/js/screens/game.js",
+        team: "./src/js/screens/team.js",
+        gameTeam: "./src/js/screens/gameTeam.js"
     },
 
     output: {

@@ -35,30 +35,55 @@
     </div>
 </header>
     <main>
-        <section class="competitions">
+        <section class="setting">
     <article class="modal modal--hidden">
     <div class="modal__content">
-        <div class="modal__title-box">
-            <h3 class="modal__title">Игра завершена!</h3>
-            <p class="modal__paragraph">Снизу можно увидеть список победителей</p>
+        <button class="modal__exit"></button>
+        <div class="modal-team__title-box">
+            <h3 class="modal-team__title">Создание команды!</h3>
+            <p class="modal-team__paragraph">Придумайте название команды и добавьте туда детей!</p>
         </div>
-        <div class="modal__winners">
+        <input placeholder="Название команды" class="modal__input" type="text">
+        <button class="modal-team__button">Создать команду!</button>
+        <div class="modal__kids-box">
+            <p class="modal__kids-box-paragraph">Списки детей:</p>
+            <div class="modal-team__winners">
+            </div>
         </div>
-        <a href="./settings.html" class="modal__button">Вернуться в настройки</a>
+
     </div>
 </article>
     <div class="wrapper">
-        <div class="competitions__content">
-            <h2 class="competitions__title">Соревнуемся против друг друга!</h2>
-            <div class="competitions__example-box">
-                <div class="competitions__example">
-                    <p class="competitions__value"></p> 
-                </div>
-                <button class="competitions__button-next">Следующее задание!</button>
+        <div class="setting__content">
+            <h1 class="setting__title">Настройки игры в команде</h1>
+            <div class="settting__buttons">
+                <a href="./gameTeam.html" class="promo__button promo__button--team promo__button--setting">Командная игра</a>
             </div>
-            <button class="competitions__button-all">Выбрать всех!</button>
-            <div class="competitions__kids">
-
+            <div class="setting__block">
+                <section class="tasks">
+    <div class="tasks__title-box">
+        <h2 class="tasks__title">Задания для детей</h2>
+        <p class="tasks__paragraph">Добавте задания для детей, чтобы начать игру (это могут быть различные примеры или другие вопросы)</p>
+    </div>
+    <form class="tasks__form">
+        <input placeholder="Любая задача (к примеру 2 + 1 = ?)" class="tasks__input" type="text">
+        <button class="tasks__button">Добавить задание!</button>
+    </form>
+    <div class="tasks__box">
+    </div>
+</section>
+                <section class="teams">
+    <div class="teams__title-box">
+        <h2 class="teams__title">Команды для игры!</h2>
+        <p class="teams__paragraph">
+            Добавьте в игру команды, которые будут учавствовать в гонке 
+            (вы можете отредактировать список команд, добавить или удалить команду из списка)
+        </p>
+    </div>
+    <button class="team__button">Добавить команду!</button>
+    <div class="teams__box">
+    </div>
+</section>
             </div>
         </div>
     </div>
@@ -96,6 +121,6 @@
         </div>
     </div>
 </footer>
-    <script src="./js/game.bundle.js"></script>
+    <script src="./js/team.bundle.js"></script>
 </body>
 </html>

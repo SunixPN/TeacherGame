@@ -1,5 +1,5 @@
-export const kidGameButtonHandleClick = (event) => {
-    const tasksLength = JSON.parse(localStorage.getItem("tasks")).length
+export const kidGameButtonHandleClick = (tasks) => (event) => {
+    const tasksLength = tasks.length
 
     if (event.target.classList.contains("kid-game__button--active")) {
         event.target.classList.remove("kid-game__button--active")

@@ -3,7 +3,7 @@ import { winners } from "./winner"
 
 let currentTask = 0
 
-export const competititonButtonNextHandleClick = (kidGames, tasks, allButton) => {
+export const competititonButtonNextHandleClick = (kidGames, tasks, allButton, members) => {
     currentTask += 1
     const competitionValue = document.querySelector(".competitions__value")
 
@@ -20,7 +20,7 @@ export const competititonButtonNextHandleClick = (kidGames, tasks, allButton) =>
         const winnerKids = winners(kidGames)
         const modal = document.querySelector(".modal")
         
-        modalScript(modal, winnerKids)
+        modalScript(modal, winnerKids, members)
     }
 
     else {
