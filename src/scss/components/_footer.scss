@@ -106,6 +106,7 @@
     @include adaptive-font(15, 18);
     color: white;
     font-weight: 400;
+    text-align: center;
 }
 
 @media screen and (max-width: 1228px) {

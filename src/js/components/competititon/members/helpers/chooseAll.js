@@ -1,5 +1,6 @@
-export const chooseAllHandleClick = (buttons, tasks) => (event) => {
+export const chooseAllHandleClick = (buttons, tasks, history, currentTask) => (event) => {
     const tasksLength = tasks.length
+    history[currentTask.task].splice(0, history[currentTask.task].length)
 
     if (event.target.classList.contains("competitions__button-all--active")) {
         buttons.forEach(button => {
@@ -28,7 +29,7 @@ export const chooseAllHandleClick = (buttons, tasks) => (event) => {
                 
                 button.parentElement.firstElementChild.textContent = percent
             }
-
+            history[currentTask.task].push(Number(button.parentElement.firstElementChild.nextElementSibling.textContent))
             button.classList.add("kid-game__button--active")
             button.textContent = "Выбран"
 
@@ -36,5 +37,7 @@ export const chooseAllHandleClick = (buttons, tasks) => (event) => {
             event.target.textContent = "Все выбраны!"
         });
     }
+
+    console.log(history)
 
 }

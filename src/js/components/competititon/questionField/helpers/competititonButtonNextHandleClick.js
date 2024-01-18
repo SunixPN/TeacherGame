@@ -1,16 +1,14 @@
 import { modalScript } from "./modal"
 import { winners } from "./winner"
 
-let currentTask = 0
-
-export const competititonButtonNextHandleClick = (kidGames, tasks, allButton, members) => {
-    currentTask += 1
+export const competititonButtonNextHandleClick = (kidGames, tasks, allButton, members, currentTask, history) => {
+    currentTask.task += 1
     const competitionValue = document.querySelector(".competitions__value")
 
     allButton.classList.remove("competitions__button-all--active")
     allButton.textContent = "Выбрать всех!"
 
-    if (currentTask === tasks.length) {
+    if (currentTask.task === tasks.length) {
         competitionValue.classList.add("competitions__value--hidden")
         setTimeout(() => {
             competitionValue.textContent = "Просчёт победителей ..."
@@ -26,7 +24,7 @@ export const competititonButtonNextHandleClick = (kidGames, tasks, allButton, me
     else {
         competitionValue.classList.add("competitions__value--hidden")
         setTimeout(() => {
-            competitionValue.textContent = tasks[currentTask].value
+            competitionValue.textContent = tasks[currentTask.task].value
             competitionValue.classList.remove("competitions__value--hidden")
         }, 500)
     }
@@ -45,5 +43,15 @@ export const competititonButtonNextHandleClick = (kidGames, tasks, allButton, me
 
         button.classList.remove("kid-game__button--active")
         button.textContent = "Выбрать!"
+
+        if (currentTask.task !== tasks.length) {
+            if (history[currentTask.task].some(id => id === Number(kidGame.firstElementChild.nextElementSibling.textContent))) {
+                button.classList.add("kid-game__button--active")
+                button.textContent = "Выбран"
+    
+                kidGame.firstElementChild.textContent = Number(kidGame.firstElementChild.textContent) + (100 / tasks.length)
+            }
+        }
+
     });
 }

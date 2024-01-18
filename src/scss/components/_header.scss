@@ -52,6 +52,11 @@
     display: flex;
     align-items: center;
     gap: 30px;
+
+    li {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .nav__link {
@@ -68,13 +73,100 @@
     }
 }
 
+.nav__elem-drop {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    position: relative;
+
+    @media (hover: hover) {
+        &:hover {
+            .nav__link {
+                color: $orange;
+            }
+        }
+    }
+
+    &:hover {
+        .drop {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+    }
+}
+
+.nav__drop-button {
+    min-width: 12px;
+    min-height: 12px;
+    background-color: inherit;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/svg/drop.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.drop {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 325px;
+    transition: 0.3s;
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.drop__menu {
+    width: 100%;
+    transform: translateY(10px);
+    background-color: white;
+    padding: 20px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.223);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.drop__elem {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.473);
+
+    &:last-child {
+        padding-top: 10px;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+.drop__link {
+    color: $text;
+    font-weight: 500;
+    @include adaptive-font(14, 17);
+    transition: 0.3s;
+
+    @media (hover: hover) {
+        &:hover {
+            color: $orange;
+        }
+    }
+
+}
+
 @media screen and (max-width: 1062px) {
     .nav {
         gap: 20px;
     }
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 945px) {
     .header__contacts {
         display: none;
     }
@@ -86,9 +178,24 @@
     }
 }
 
-@media screen and (max-width: 518px) {
+@media screen and (max-width: 556px) {
     .nav__logo {
         display: none;
+    }
+
+    .nav__drop-button {
+        min-width: 10px;
+        min-height: 10px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .drop  {
+        width: 165px;
+    }
+
+    .drop__elem {
+        text-align: center;
     }
 
     .nav {
@@ -100,12 +207,16 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 410px) {
     .nav__list {
         gap: 30px;
 
         li:last-child {
             display: none;
         }
+    }
+
+    .drop__menu .drop__elem:last-child {
+        display: block;
     }
 }

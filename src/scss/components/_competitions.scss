@@ -44,25 +44,37 @@
     opacity: 0;
 }
 
-.competitions__button-next {
-    flex: 0 0 250px;
-    padding: 15px 0;
-    border-radius: 8px;
+.competitions__button {
+    min-width: 80px;
+    min-height: 80px;
     background-color: $orange;
-    color: white;
-    letter-spacing: 1px;
-    font-weight: 600;
-    @include adaptive-font(15, 17);
+    border-radius: 50%;
+    position: relative;
     cursor: pointer;
     transition: 0.3s;
-    border: 3px solid $orange;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        background-image: url(../images/other/arrowRight.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 
     @media (hover: hover) {        
         &:hover {
-            background-color: inherit;
-            color: $orange;
+            background-color: $text;
         }
     }
+}
+
+.button-prev {
+    transform: rotate(180deg);
 }
 
 .competitions__kids {
@@ -294,10 +306,26 @@
     color: white;
 }
 
+.competitions__buttons {
+    display: none;
+}
+
 @media screen and (max-width: 1031px) {
     .kid-game {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .competitions__button {
+        min-width: 50px;
+        min-height: 50px;
+        width: 50px;
+        height: 50px;
+
+        &::before {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     .kid-game__name {
@@ -334,16 +362,6 @@
         margin-top: 15px;
     }
 
-    .competitions__example-box {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .competitions__button-next {
-        flex: 0 1 auto;
-        width: 100%;
-    }
-
     .competitions__example {
         max-width: none;
         width: 100%;
@@ -357,6 +375,19 @@
     .kid-game__button {
         width: 90%;
     }
+}
 
+@media screen and (max-width: 500px) {
+    .competitions__buttons {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 50px;
+        justify-content: center;
+    }
 
+    .competitions__example-box {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

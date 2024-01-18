@@ -1,7 +1,7 @@
 import { kidGameButtonHandleClick } from "./helpers/kidGameButtonHandleClick";
 import { chooseAllHandleClick } from "./helpers/chooseAll"; 
 
-export const membersRender = (members, container, allButton, tasks) => {
+export const membersRender = (members, container, allButton, tasks, history, currentTask) => {
     container.innerHTML = ""
 
     members.forEach(member => {
@@ -23,8 +23,8 @@ export const membersRender = (members, container, allButton, tasks) => {
     const memberGameButtons = document.querySelectorAll(".kid-game__button")
 
     memberGameButtons.forEach(memberGameButton => {
-        memberGameButton.addEventListener("click", kidGameButtonHandleClick(tasks))
+        memberGameButton.addEventListener("click", kidGameButtonHandleClick(tasks, history, currentTask))
     })
 
-    allButton.addEventListener("click", chooseAllHandleClick(memberGameButtons, tasks))
+    allButton.addEventListener("click", chooseAllHandleClick(memberGameButtons, tasks, history, currentTask))
 }
