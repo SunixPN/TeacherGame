@@ -35,8 +35,8 @@ gulp.task("includes:docs", () => {
             prefix: "@@",
             basepath: "@file"
         }))
-        .pipe(webpHTML())
         .pipe(htmlClean())
+        .pipe(webpHTML())
         .pipe(gulp.dest("./docs/"))
 })
 
